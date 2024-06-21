@@ -1,9 +1,5 @@
 #!/usr/bin/bash
 
-# Set AWS credentials and default region
-#export AWS_ACCESS_KEY_ID=""
-#export AWS_SECRET_ACCESS_KEY=""
-#export AWS_DEFAULT_REGION=""
 function usage {
  cat <<EOF
  $0 <option> <path>
