@@ -67,22 +67,4 @@ if [[ $? -ne 0 ]]; then
 else
   echo "Local backup file deleted."
 fi
- Upload the backup to S3
-aws s3 cp $backup_file s3://$s3_bucket/
-
-if [[ $? -ne 0 ]]; then
-  echo "ERROR: Failed to upload backup to S3."
-  exit 1
-fi
-
-echo "Backup successfully uploaded to s3://$s3_bucket/"
-
-# Cleanup local backup file
-rm -f $backup_file
-
-if [[ $? -ne 0 ]]; then
-  echo "WARNING: Failed to delete local backup file."
-else
-  echo "Local backup file deleted."
-fi
 
