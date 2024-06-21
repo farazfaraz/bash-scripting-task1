@@ -48,10 +48,6 @@ fi
 
 echo "Backup file created: $backup_file"
 
-
-
-
-
 #If you did not configure your AWS CLI first --> type 'aws configure' on your terminal
 # Upload the backup to S3
 aws s3 cp $backup_file s3://$s3_bucket/
